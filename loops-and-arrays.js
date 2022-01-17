@@ -12,8 +12,10 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(names) geeft: ["Henkje", "Pietje", "Fredje", "Joopje"]
 
-
-
+for (let i =0; i<names.length; i++) {
+    names[i] = names[i] + "je";
+}
+console.log(names);
 
 // ==========================================
 // Opdracht 2
@@ -29,18 +31,25 @@ const numbers = [2, 4, 5, 29, 38];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(numbers) geeft: [ 4, 8, 10, 87, 76 ];
 
-
-
+for(let i=0; i<numbers.length; i++){
+    if(numbers[i]%2 !== 0){
+        numbers[i] *= 3;
+    }
+    else{
+        numbers[i] *= 2;
+    }
+}
+console.log(numbers)
 
 // ==========================================
 // Opdracht 3
-// Schrijf een script dat voor de maat van ieder vierkant in onderstaande array het volume uitrekent.
+// Schrijf een script dat voor de maat van ieder kubus in onderstaande array het volume uitrekent.
 // Vervolgens moet de huidige waarde in de array overschreven worden met: "Het volume van [x] is [y]"
 // Het volume is lengte x breedte x hoogte
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // ==========================================
 
-const squares = [30, 2, 8, 24, 11];
+const cubes = [30, 2, 8, 24, 11];
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
@@ -53,3 +62,8 @@ const squares = [30, 2, 8, 24, 11];
 //   'Het volume van 24 is 13824',
 //   'Het volume van 11 is 1331'
 // ]
+
+for(let i=0; i<cubes.length; i++){
+    cubes[i] = "het volume van " + cubes[i] + " is " + Math.pow(cubes[i], 3);
+}
+console.log(cubes)
